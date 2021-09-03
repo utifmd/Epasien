@@ -52,7 +52,7 @@ if(isset($_GET['name']))
                     <textarea id="txt_contact_message" class="form-control" name="message" rows="5" data-rule="required" required data-msg="Please write something for us" placeholder="Message"></textarea>
                 </div>
                 <div class="text-center">
-                    <button class="btn appointment-btn" onClick="sendMail()">Kirim Pesan</button>
+                    <button class="btn appointment-btn m-0" onClick="sendMail()">Kirim Pesan</button>
                 </div>
             </form>
             </div>

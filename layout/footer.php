@@ -29,8 +29,23 @@
       
       <div class="col-lg-4 col-md-6 footer-newsletter">
         <h4>Pengumuman</h4>
-        <p><i class="bx bxs-bell"></i> Dokter Yogi telat 3 jam</p>
-        <p>27/02/2021, oleh Erwan</p>
+    <?php
+      $query = bukaquery("SELECT 
+        pegawai.nama, 
+        DATE_FORMAT(pengumuman_epasien.tanggal,'%d/%m/%Y') AS tanggal,
+        pengumuman_epasien.pengumuman FROM 
+        pengumuman_epasien INNER JOIN 
+        pegawai ON pengumuman_epasien.nik=pegawai.nik 
+        ORDER BY pengumuman_epasien.tanggal DESC LIMIT 1");
+
+      if($resource = mysqli_fetch_array($query)) {
+          echo "<p><i class=\"bx bxs-bell\"></i> ".$resource["pengumuman"]."</p>
+                <span>".$resource["tanggal"].", oleh ".$resource["nama"]."</span>";
+      }else{
+          echo "<p><i class=\"bx bxs-bell\"></i> Tidak ada pengumuman</p>
+                <span>".date('d/m/Y').", oleh Admin</span>";
+      }
+    ?>
       </div>
 
     </div>

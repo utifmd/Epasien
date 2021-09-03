@@ -14,6 +14,9 @@
     $time           = date('H:i:s');
     $date_time      = date('Y-m-d H:i:s');
     $stokdarah      = "aktif";
+
+    $root_dir = "http://".$_SERVER['HTTP_HOST']."/rsia/"; //
+    $project_dir = $root_dir."epasien_new/";
     
     function host(){
         global $db_hostname;

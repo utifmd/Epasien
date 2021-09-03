@@ -9,8 +9,8 @@
         <div class="col-lg-3 col-md-6">
         <div class="count-box">
             <i class="icofont-doctor-alt"></i>
-            <span data-toggle="counter-up">185</span>
-            <p>Doctors</p>
+            <span data-toggle="counter-up">15</span>
+            <p>Dokter</p>
         </div>
         </div>
 
@@ -18,23 +18,23 @@
         <div class="count-box">
             <i class="icofont-patient-bed"></i>
             <span data-toggle="counter-up">18</span>
-            <p>Departments</p>
+            <p>Poliklinik</p>
         </div>
         </div>
 
         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
         <div class="count-box">
             <i class="icofont-laboratory"></i>
-            <span data-toggle="counter-up">8</span>
-            <p>Research Labs</p>
+            <span data-toggle="counter-up">1</span>
+            <p>Laboratorium</p>
         </div>
         </div>
 
         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
         <div class="count-box">
             <i class="icofont-award"></i>
-            <span data-toggle="counter-up">150</span>
-            <p>Awards</p>
+            <span data-toggle="counter-up">7</span>
+            <p>Penghargaan</p>
         </div>
         </div>
 

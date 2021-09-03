@@ -1,3 +1,16 @@
+<?php
+    ob_start();
+    session_start();
+    date_default_timezone_set('Asia/Jakarta');
+    require_once('../conf/command.php');
+    require_once('../conf/conf.php');
+    header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
+    header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Pragma: no-cache");
+
+    if(isset($_GET['page'])) { ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +42,7 @@
           <h2>Halaman <?php echo $_GET['page']?></h2>
           <ol>
             <li><a href="../">Home</a></li>
-          <?php 
-            if(isset($_GET['service'])) 
+          <?php if(isset($_GET['service'])) 
               echo "<li><a href=\"../#services\">Layanan</a></li>";
             else if(isset($_GET['department']))
               echo "<li><a href=\"../#services\">Poliklinik</a></li>"; ?>
@@ -58,16 +70,21 @@
         </div>
       </section>
     <?php } else { ?>
-      <div class="container">
-        <div class="row">
-          <p>Example <?php echo $_GET['page'] ?> template</p>
-        </div>
-      </div>
+      <?php switch ($_GET['page']) {
+        case urldecode("Jadwal Dokter"): include "../layout/section/inner/doctor-schedule.php"; break;
+        case "Sejarah": echo $_GET['page']; break;
+        case "Farmasi": echo $_GET['page']; break;
+        case "ICU": echo $_GET['page']; break;
+        case "IGD": echo $_GET['page']; break;
+        case "NICU": echo $_GET['page']; break;
+        case urldecode("Semua Dokter"): include "../layout/section/inner/whole-doctor.php"; break;
+        default: echo "Default"; break; } ?>
     <?php } ?>
     </section>
-  </main><!-- End #main -->
+  </main> <!-- End #main -->
   <?php 
     include "../layout/footer.php";
     include "../layout/dep-script.php"; ?>
 </body>
 </html>
+<?php } else echo "page not found."; ?>

@@ -1,15 +1,13 @@
 <!-- ======= Appointment Section ======= -->
 <section id="appointment" class="appointment section-bg">
     <div class="container">
-
-    <div class="section-title">
-        <h2>Registrasi Online</h2> <!--Buat Janji-->
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-    </div>
-
+        <div class="section-title">
+            <h2>Registrasi Online</h2> <!--Buat Janji-->
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
     <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <img src="assets/img/departments-1.jpg" width="100%" alt="departments-1">
             </div>
             <div class="col-md-8">
@@ -48,11 +46,13 @@
             </div>
         </div>
         <div class="mb-3">
-        <div class="loading">Loading</div>
-        <div class="error-message"></div>
-        <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
         </div>
-        <div class="text-center"><button type="submit">Daftar</button></div><!--Ajukan Booking-->
+        <div class="text-center">
+            <button type="submit">Daftar</button>
+        </div><!--Ajukan Booking-->
     </form>
 
     </div>
