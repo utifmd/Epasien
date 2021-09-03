@@ -31,9 +31,7 @@
     }else{
         include_once "indexuser.php";
     }
-    */
-?>
-
+    */ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php include "../layout/header.php" ?> 
-<?php 
+<?php
   $services_one = array("Kamar Rawat Bayi", "Kamar Rawat Bersalin", "Kamar Rawat Ibu", "Kamar Rawat Operasi");
   $services_two = array("Ambulance", "Baby Spa", "Farmasi", "Fasilitas Umum", "Home Care", "ICU", "IGD", "NICU", "Pendaftaran / Layanan Klien", "Usg 3D/4D");
 
@@ -25,7 +25,6 @@
   <main id="main">
     <section class="breadcrumbs">
       <div class="container">
-
         <div class="d-flex justify-content-between align-items-center">
           <h2>Halaman <?php echo $_GET['page']?></h2>
           <ol>
@@ -38,7 +37,6 @@
             <li><?php echo $_GET['page'] ?></li>
           </ol>
         </div>
-
       </div>
     </section>
 

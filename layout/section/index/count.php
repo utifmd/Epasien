@@ -1,7 +1,9 @@
 <!-- ======= Counts Section ======= -->
 <section id="counts" class="counts">
     <div class="container">
-
+    <?php
+    
+    ?>
     <div class="row">
 
         <div class="col-lg-3 col-md-6">
