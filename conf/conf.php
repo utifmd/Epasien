@@ -3,11 +3,13 @@
         exit(header("Location:../index.php"));
     }
     
+    /* localserver */
     $db_hostname            = "mysql";
     $db_username            = "root";
     $db_password            = "9809poiiop";
-    $db_name                = "sik";
-    $port                = "3306";
+    $db_name                = "sik"; // "rsia";
+    $port                   = "3306";
+    
     define('URUTNOREG', 'dokter'); // dokter / poli / dokter + poli
     $month          = date('Y-m');
     $date           = date('Y-m-d');
@@ -17,6 +19,7 @@
 
     $root_dir = "http://".$_SERVER['HTTP_HOST']."/rsia/"; //
     $project_dir = $root_dir."epasien_new/";
+    $app_name = "RSIA Fadhila";
     
     function host(){
         global $db_hostname;

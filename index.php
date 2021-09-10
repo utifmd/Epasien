@@ -33,8 +33,7 @@
     include "./layout/section/index/service.php";
     include "./layout/section/index/appointment.php";
     include "./layout/section/index/department.php";
-    include "./layout/section/index/doctor.php";
-    include "./layout/section/index/faq.php"; /* include "./layout/section/index/testimonial.php" */ 
+    include "./layout/section/index/doctor.php"; //include "./layout/section/index/faq.php"; /* include "./layout/section/index/testimonial.php" */ 
     include "./layout/section/index/gallery.php";
     include "./layout/section/index/contact.php"; 
     include "./layout/footer.php"; ?>
