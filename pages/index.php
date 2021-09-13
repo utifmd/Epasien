@@ -4,6 +4,7 @@
     date_default_timezone_set('Asia/Jakarta');
     require_once('../conf/command.php');
     require_once('../conf/conf.php');
+    require_once('../data/index.php');
     header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
     header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
     header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
@@ -93,8 +94,9 @@
           include "../layout/section/inner/cooperation.php"; break;
         case urldecode("Why Choose Us"):
           include "../layout/section/inner/why-choose-us.php"; break;
-        default: echo "Default"; break; } ?>
-    <?php } ?>
+        default: if(isset($_GET['data']))
+            include "../layout/section/inner/index.php";
+          else echo "Default"; break; }} ?>
     </section>
   </main> <!-- End #main -->
   <?php 

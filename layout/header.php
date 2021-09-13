@@ -47,9 +47,9 @@
                     <li><a href="<?php echo $navBack?>#departments">Poliklinik</a></li>
                     <li class="drop-down"><a>Penunjang Medis</a>
                     <ul>
-                        <li><a href="<?php echo $navTo.urlencode("Ambulance")?>">Ambulance</a></li>
-                        <li><a href="<?php echo $navTo.urlencode("Baby Spa")?>">Baby Spa</a></li>
-                        <li><a href="<?php echo $navTo?>Farmasi">Farmasi</a></li>
+                        <li><a href="<?php echo $navTo.urlencode("Ambulance")."&data=".$token_ambulance?>">Ambulance</a></li>
+                        <li><a href="<?php echo $navTo.urlencode("Baby Spa")."&data=".$token_baby_spa?>">Baby Spa</a></li>
+                        <li><a href="<?php echo $navTo."Farmasi&data=".$token_farmasi?>">Farmasi</a></li>
                         <li><a href="<?php echo $navTo.urlencode("Fasilitas Umum")?>">Fasilitas Umum</a></li>
                         <li><a href="<?php echo $navTo.urlencode("Home Care")?>">Home Care</a></li>
                         <li><a href="<?php echo $navTo?>ICU">ICU</a></li>
