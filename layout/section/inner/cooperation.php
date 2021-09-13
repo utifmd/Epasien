@@ -14,9 +14,9 @@
             <?php for($i = 0; $i < count($list); $i++) {?>
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <?php echo strtolower(str_replace(" ", "-", $list[$i]).".jpeg")?>
-                    <a href="../assets/img/gallery/gallery-1.jpg" class="venobox" data-gall="gallery-item">
-                        <img id="icon" src="../assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                    <?php $file_name =  strtolower(str_replace(" ", "-", $list[$i]).".jpeg") ?>
+                    <a href="../assets/img/gallery/coopertion/<?php echo $file_name?>" class="venobox" data-gall="gallery-item">
+                        <img id="icon" src="../assets/img/gallery/coopertion/<?php echo $file_name?>" alt="" class="img-fluid">
                     </a>
                 </div>
             </div>
