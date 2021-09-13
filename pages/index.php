@@ -89,6 +89,8 @@
           include "../layout/section/inner/whole-doctor.php"; break;
         case urldecode("Visi & Misi"):
           include "../layout/section/inner/vision-mission.php"; break;
+        case urldecode("Kerja Sama"):
+          include "../layout/section/inner/cooperation.php"; break;
         case urldecode("Why Choose Us"):
           include "../layout/section/inner/why-choose-us.php"; break;
         default: echo "Default"; break; } ?>

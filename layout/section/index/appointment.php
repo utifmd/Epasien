@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="mb-3">
-            <div class="loading">Loading</div>
+            <!-- <div class="loading">Loading</div> -->
             <div class="error-message"></div>
             <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
         </div>
@@ -66,6 +66,5 @@
             <a href="./pages/?page=<?php echo urlencode("Check Booking Status")?>" target='_blank'>Check Booking Status</a>
         </div>
     </form>
-
     </div>
-</section><!-- End Appointment Section -->
+</section> 
