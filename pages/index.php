@@ -75,17 +75,11 @@
         case urldecode("Jadwal Dokter"): 
           include "../layout/section/inner/doctor-schedule.php"; break;
         case urldecode("Dokter Detail"): 
-          include "../layout/section/inner/doctor-detail.php"; break;
-        case "Sejarah": 
-          include "../layout/section/inner/company-profile.php"; break;
+          include "../layout/section/inner/doctor-detail.php"; break; /*case "Sejarah": include "../layout/section/inner/company-profile.php"; break;*/
         case urldecode("Booking Success"): 
           include "../layout/section/inner/booking-success.php"; break;
         case urldecode("Check Booking Status"): 
           include "../layout/section/inner/check-booking.php"; break;
-        case "Farmasi": echo $_GET['page']; break;
-        case "ICU": echo $_GET['page']; break;
-        case "IGD": echo $_GET['page']; break;
-        case "NICU": echo $_GET['page']; break;
         case urldecode("Semua Dokter"): 
           include "../layout/section/inner/whole-doctor.php"; break;
         case urldecode("Visi & Misi"):
@@ -96,7 +90,7 @@
           include "../layout/section/inner/why-choose-us.php"; break;
         default: if(isset($_GET['data']))
             include "../layout/section/inner/index.php";
-          else echo "Default"; break; }} ?>
+          else echo "Empty"; break; }} ?>
     </section>
   </main> <!-- End #main -->
   <?php 
