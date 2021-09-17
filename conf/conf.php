@@ -4,11 +4,11 @@
     }
     
     /* localserver */
-    $db_hostname            = "mysql";
+    $db_hostname            = "localhost";
     $db_username            = "root";
-    $db_password            = "9809poiiop";
-    $db_name                = "sik"; // "rsia";
-    $port                   = "3306";
+    $db_password            = "";
+    $db_name                = "rsia"; // "rsia";
+    $port                   = 3306;
     
     define('URUTNOREG', 'dokter'); // dokter / poli / dokter + poli
     $month          = date('Y-m');
@@ -17,22 +17,23 @@
     $date_time      = date('Y-m-d H:i:s');
     $stokdarah      = "aktif";
 
-    $root_dir = "http://".$_SERVER['HTTP_HOST']."/rsia/"; //
-    $project_dir = $root_dir."epasien_new/";
+    $root_dir = "http://".$_SERVER['HTTP_HOST']."/public_html/"; //
     $app_name = "RSIA Fadhila";
+    $project_dir = $root_dir."Epasien/";
     
     function host(){
-        global $db_hostname;
+        global $db_hostname; 
         return $db_hostname;
     }
     
     function  bukakoneksi(){
-     	global $db_hostname, $db_username, $db_password, $db_name;
+     	global $db_hostname, $db_username, $db_password, $db_name, $port;
          $konektor = mysqli_connect(
              $db_hostname,
              $db_username,
              $db_password,
-             $db_name, $port)
+             $db_name, 
+             $port)
          or die ("<font color=red><h3>Not Connected ..!!</h3></font>");
          $db_select=mysqli_select_db($konektor, $db_name)
          or die("<font color=red><h3>Cannot chose database..!!</h3></font>". mysqli_error());

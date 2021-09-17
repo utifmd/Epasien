@@ -1,3 +1,9 @@
+<?php
+    $next_time = date("Y-m-d", strtotime("+1 day"));
+    $next_year = substr($next_time, 0, 4);
+    $next_month = substr($next_time, 5, 2);
+    $next_day = substr($next_time, 8, 2); ?>
+    
 <!-- ======= Appointment Section ======= -->
 <section id="appointment" class="appointment section-bg">
     <div class="container">
@@ -27,12 +33,16 @@
                         <div class="validate"></div>
                     </div>
                     <div class="col-md-4 form-group">
-                        <input id="date" type="datetime" name="date" class="form-control datepicker" placeholder="Tanggal Janji" data-rule="minlen:4" data-msg="Tolong isi paling tidak 4 karakter">
+                        <input id="date" type="datetime" name="date" value="<?php echo $next_month."/".$next_day."/".$next_year ?>" class="form-control datepicker" placeholder="Tanggal Janji" data-rule="minlen:4" data-msg="Tolong isi paling tidak 4 karakter">
                         <div class="validate"></div>
                     </div>
                     <div class="col-md-4 form-group">
                         <select name="department" id="department" class="form-control">
-                    <?php $query_poli = bukaquery("SELECT * FROM poliklinik WHERE status='1' ORDER BY nm_poli");
+                    <?php $query_poli = bukaquery("SELECT * FROM poliklinik WHERE `status` = '1' 
+                        AND `nm_poli` != 'ORTHOPEDI' 
+                        AND `nm_poli` != 'Paru' 
+                        AND `nm_poli` NOT LIKE '%logi%' 
+                        AND `nm_poli` NOT LIKE '%kamar%' ORDER BY `nm_poli` DESC");
                         while($resource = mysqli_fetch_array($query_poli)) 
                             echo "<option value=".$resource[0].">".$resource[1]."</option>"; ?>
                         </select>

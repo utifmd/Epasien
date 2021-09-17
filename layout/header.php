@@ -37,26 +37,17 @@
                 <li class="drop-down"><a href="<?php echo $navBack?>#services">Layanan</a>
                 <ul>
                     <li class="drop-down"><a>Rawat Inap</a>
-                    <ul>
-                        <li><a href="<?php echo $navTo.urlencode("Kamar Rawat Bayi")."&data=".$token_treat_room_baby?>">Kamar Rawat Bayi</a></li>
-                        <li><a href="<?php echo $navTo.urlencode("Kamar Rawat Bersalin")."&data=".$token_treat_room_obgyn?>">Kamar Rawat Bersalin</a></li>
-                        <li><a href="<?php echo $navTo.urlencode("Kamar Rawat Ibu")."&data=".$token_treat_room_mom?>">Kamar Rawat Ibu</a></li>
-                        <li><a href="<?php echo $navTo.urlencode("Kamar Rawat Operasi")."&data=".$token_treat_room_operate?>">Kamar Rawat Operasi</a></li>
+                    <ul> <?php for ($i=0; $i < count($data['service-one']); $i++) { echo "<li>
+                            <a href=".$navTo.urlencode($data['service-one'][$i]['title'])."&data=".tokenizeData($data['service-one'][$i]).">".$data['service-one'][$i]['title']."</a>
+                        </li>"; } ?>
                     </ul>
                     </li>
                     <li><a href="<?php echo $navBack?>#departments">Poliklinik</a></li>
                     <li class="drop-down"><a>Penunjang Medis</a>
-                    <ul>
-                        <li><a href="<?php echo $navTo.urlencode("Ambulance")."&data=".$token_ambulance?>">Ambulance</a></li>
-                        <li><a href="<?php echo $navTo.urlencode("Baby Spa")."&data=".$token_baby_spa?>">Baby Spa</a></li>
-                        <li><a href="<?php echo $navTo."Farmasi&data=".$token_pharmacy?>">Farmasi</a></li>
-                        <li><a href="<?php echo $navTo.urlencode("Fasilitas Umum")."&data=".$token_common_facility?>">Fasilitas Umum</a></li>
-                        <li><a href="<?php echo $navTo.urlencode("Home Care")."&data=".$token_common_home_care?>">Home Care</a></li>
-                        <li><a href="<?php echo $navTo."ICU&data=".$token_common_icu?>">ICU</a></li>
-                        <li><a href="<?php echo $navTo."IGD&data=".$token_common_igd?>">IGD</a></li>
-                        <li><a href="<?php echo $navTo."NICU&data=".$token_common_nicu?>">NICU</a></li>
-                        <!-- <li><a href="<?php //echo $navTo.urlencode("Pendaftaran /Layanan Klien")?>">Pendaftaran /Layanan Klien</a></li>
-                        <li><a href="<?php// echo $navTo.urlencode()?>USG 3D /4D"></a></li> <li><a href="../#facility">Reservasi Dokter</a></li> -->
+                    <ul><?php for ($i=0; $i < count($data['service-third']); $i++) { $selected_thd = $data['service-third'][$i]; echo "
+                        <li><a href=".$navTo.urlencode($selected_thd['title'])."&data=".tokenizeData($selected_thd).">".$selected_thd['title']."</a></li>
+                    "; }?>
+                        
                     </ul>
                     </li>
                 </ul>

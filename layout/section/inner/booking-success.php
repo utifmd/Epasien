@@ -8,7 +8,7 @@
                 Catatan : Nomor booking wajib anda ingat. Nomor booking bukan merupakan nomor pendaftaran poliklinik/unit. Kami akan melakukan pengecekan terhadap jadwal & kuota dokter yang tersedia berdasarkan booking Anda. Konfirmasi booking periksa akan Kami sampaikan melalui E-Mail atau Nomor HP/Telp Anda.
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-6 table-responsive">
+                <div class="col-md-8">
                     <table class="table table-striped m-3">
                         <tr><th>No. Booking</th><td>: <?php echo $regis_number?></td></tr>
                         <tr><th>Tgl. Booking</th><td>: <?php echo $_SESSION['current_date']?></td></tr>

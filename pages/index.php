@@ -26,16 +26,12 @@
 </head>
 <body>
 <?php include "../layout/header.php" ?> 
-<?php
-  $services_one = array("Kamar Rawat Bayi", "Kamar Rawat Bersalin", "Kamar Rawat Ibu", "Kamar Rawat Operasi");
-  $services_two = array("Ambulance", "Baby Spa", "Farmasi", "Fasilitas Umum", "Home Care", "ICU", "IGD", "NICU", "Pendaftaran / Layanan Klien", "Usg 3D/4D");
-
-  switch ($_GET['service']) {
-    case 'first':
-        $boxes = $services_one; break;
-    default:
-        $boxes = $services_two; break;
-  } ?>
+<?php switch ($_GET['service']) {
+  case 'first':
+      $boxes = $data['service-one']; break;
+  default:
+      $boxes = $data['service-third']; break;
+} ?>
   
   <main id="main">
     <section class="breadcrumbs">
@@ -63,7 +59,7 @@
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom:2em">
               <div class="icon-box">
                 <div class="icon"><i class="icofont-heart-beat"></i></div>
-                <h4><a href="?page=<?php echo $boxes[$i]; ?>"><?php echo $boxes[$i]; ?></a></h4>
+                <h4><a href="?page=<?php echo urlencode($boxes[$i]['title']) ?>&data=<?php echo tokenizeData($boxes[$i]) ?>"><?php echo $boxes[$i]['title']?></a></h4>
                 <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
               </div>
             </div>

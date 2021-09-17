@@ -7,7 +7,7 @@
         </div>
         <form class="text-center" method="post" role="form" class="custom-form">
             <div class="row justify-content-center align-items-center">
-                <div class="col-md-6 form-col">
+                <div class="col-md-8 form-col">
                     <div class="form-group">
                         <input type="text" required name="regis_num" class="form-control" id="regis_num" placeholder="No. Booking" data-rule="minlen:4" data-msg="Tolong isi paling tidak 4 karakter">
                     </div>
@@ -32,7 +32,7 @@ function layoutAlert($title, $message){ return "
 
 function funCheckListener(){
     $regis_number =  $_POST['regis_num'];
-    $phone = $_POST['phone_num']; /* BP202109080001 +6281275340004 */ // 
+    $phone = $_POST['phone_num'];
     
     $query_check = bukaquery("SELECT COUNT(no_booking) AS noboking,
         IF(tanggal > current_date,'aman','kadaluarsa') AS tanggal, status 
@@ -98,7 +98,7 @@ function funStatusAccepted($regis_number, $reply){ // echo "funStatusAccepted";
                     Booking Anda diterima, admin Kami sudah melakukan verifikasi data Anda".($reply=="" ? "" : ".<br>$reply")."
                 </div>
                 <div class=\"row justify-content-center\">
-                    <div class=\"col-md-6 table-responsive\">
+                    <div class=\"col-md-8\">
                         <table class=\"table table-striped m-3\">
                             <tr><th>Tgl. Booking</th><td>: ".$resource_accepted["tanggal_booking"]." ".$resource_accepted["jam_booking"]."</td></tr>
                             <tr><th>Tgl. Periksa</th><td>: ".$resource_accepted["tanggal_periksa"]."</td></tr>
@@ -115,7 +115,7 @@ function funStatusAccepted($regis_number, $reply){ // echo "funStatusAccepted";
                     </div>
                 </div>
                 <div class=\"text-center align-items-center justify-content-center\">
-                    <a class=\"btn appointment-btn m-auto\" href=\"../components/CetakBooking.php?iyem=".encrypt_decrypt("{\"nobooking\":\"$no_urut\"}","e")."\" target=\"_blank\">Cetak</a>
+                    <a class=\"btn appointment-btn m-auto\" href=\"../components/CetakBooking.php?iyem=".encrypt_decrypt("{\"nobooking\":\"$regis_number\"}","e")."\" target=\"_blank\">Cetak</a>
                 </div>
             </div>
         </section>";
