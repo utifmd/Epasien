@@ -4,16 +4,22 @@
         <div class="section-title">
             <h2><?php echo ucwords($data['title'])." ".$app_name?></h2>
         </div>
-        <?php if(isset($data['sections'])) { for($i = 0; $i < count($data['sections']); $i++) {?>
+        <?php if(isset($data['sections'])) { $section = $data['sections']; 
+            ?>
             <div class="row">
                 <div class="col-md-4">
-                    <img src="<?php echo $data['sections'][$i]['image']?>" class="mb-3" alt="departments-1" width="100%">
+                <?php for($i = 0; $i < count($section); $i++) { ?>
+                    <img src="<?php echo $section[$i]['image']?>" class="mb-3" alt="departments-1" width="100%">
+                <?php } ?>
                 </div>
                 <div class="col-md-8" align="justify">
-                    <p><?php echo $data['sections'][$i]['body']?></p>
+                <?php for($i = 0; $i < count($section); $i++) { ?>
+                    <p><?php echo $section[$i]['body']?></p>
+                <?php } ?>
                 </div>
             </div>
-            <?php }} else { ?>
+            <?php 
+        } else { ?>
             <div class="row">
                 <div class="col-md-4">
                     <img src="<?php echo $data['image']?>" class="mb-3" alt="departments-1" width="100%">

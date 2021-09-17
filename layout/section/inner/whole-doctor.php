@@ -14,26 +14,26 @@ $query = bukaquery("SELECT dokter.kd_dokter,
     <div class="container">
         <div class="section-title">
             <h2><?php echo $_GET['page']?></h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <p>Dokter kami merupakan lulusan universitas terbaik di indonesia.</p>
         </div>
         <div class="row">
         <?php if(true) { while($resource = mysqli_fetch_array($query)){ ?>
             <div class="col-lg-4 col-md-4 mt-3 mb-3">
                 <div class="align-items-center">
                     <div class="pic">
-                    <?php echo "
-                        <a href=\"".$root_dir."/webapps/penggajian/".$resource[4]."\" class=\"venobox\" data-gall=\"gallery-item\">
-                            <img src=\"".$root_dir."/webapps/penggajian/".$resource[4]."\" class=\"img-fluid\" alt=\"doctor picture\">
-                        </a>" ?> <!--<img src=\"".$root_dir."/webapps/penggajian/".$resource[4]."\" class=\"img-fluid\" alt=\"".$resource[4]."\">-->
+                        <a href="<?php echo $root_dir."/webapps/penggajian/".$resource[4]?>" class="venobox" data-gall="gallery-item">
+                            <img src="<?php echo $root_dir."/webapps/penggajian/".$resource[4]?>" class="img-fluid" alt="doctor picture">
+                        </a>
                     </div>
                     <div class="member member-info p-3">
                         <h4><?php echo str_pad(ucwords($resource[1]), 20);?></h4> <!--ucwords(strlen( ? "" : ""))-->
                         <a>No. SIP <?php echo $resource[3]?></a>
                         <span><i class='bx bx-dna'></i> Sepesialis <?php echo $resource[2]?></span>
                         <!-- <span>Sepecialist <?php /* echo $resource[0] */ ?></span> --> <!-- <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p> -->
-                        <div class="social"> <!--<a href=""><i class="ri-twitter-fill"></i></a> <a href=""><i class="ri-facebook-fill"></i></a> <a href=""><i class="ri-instagram-fill"></i></a>-->
+                        <!--<a href=""><i class="ri-twitter-fill"></i></a> <a href=""><i class="ri-facebook-fill"></i></a> <a href=""><i class="ri-instagram-fill"></i></a>-->
+                        <!-- <div class="social"> 
                             <a href=""><i class="ri-linkedin-box-fill"></i> </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

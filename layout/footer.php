@@ -21,7 +21,7 @@
         <h4>Tautan cepat</h4>
         <ul>
           <li><i class="bx bx-chevron-right"></i> <a href="<?php echo $path?>#">Beranda</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="<?php echo $path?>#profile">Profile</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="<?php echo $path."pages/?page=".urlencode("Visi & Misi").""?>">Profile</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="<?php echo $path?>#services">Layanan</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="<?php isset($_GET['page']) ? "" : "./pages/" ?>?page=Jadwal&nbsp;Dokter">Jadwal Dokter</a></li>
         </ul>

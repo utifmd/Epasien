@@ -6,7 +6,7 @@
         <div class="col-lg-4 d-flex align-items-stretch">
         <div class="content">
             <h3>Kenapa memilih RSIA Fadhila?</h3>
-            <p align="justify">Rumah Sakit Ibu Dan Anak (<?php echo $app_name;?>) selalu berkomitmen menghadirkan inovasi layanan untuk pasien. Didukung oleh Dokter, Perawat, Paramedis dan Staf yang profesional dan ramah melayani pasien.  Serta didukung dengan peralatan medis modern dan terbaru, kami yakin <?php echo $app_name;?> akan selalu menjadi pilihan Anda dan Keluarga.</p>
+            <p align="center">Rumah Sakit Ibu Dan Anak (<?php echo $app_name;?>) selalu berkomitmen menghadirkan inovasi layanan untuk pasien. Didukung oleh Dokter, Perawat, Paramedis dan Staf yang profesional dan ramah melayani pasien.  Serta didukung dengan peralatan medis modern dan terbaru, kami yakin <?php echo $app_name;?> akan selalu menjadi pilihan Anda dan Keluarga.</p>
             <div class="text-center">
             <a href="./pages/?page=<?php echo urlencode("Why Choose Us")?>" class="more-btn">Selengkapnya <i class="bx bx-chevron-right"></i></a>
             </div>
@@ -25,22 +25,8 @@
             <div class="col-xl-4 d-flex align-items-stretch">
                 <div class="icon-box mt-4 mt-xl-0">
                 <i class="bx bx-cube-alt"></i>
-                <h4>Layanan Setiap Saat</h4>
-                <p>Sebagai salah satu Rumah Sakit besar di Batusangkar, <?php echo $app_name;?> membuka layanan Poli Spesialis setiap saat.</p>
-                </div>
-            </div>
-            <div class="col-xl-4 d-flex align-items-stretch">
-                <div class="icon-box mt-4 mt-xl-0">
-                <i class="bx bx-cube-alt"></i>
                 <h4>Elektronik Rekam Medis (ERM)</h4>
                 <p>Saat ini Patient Safety (Keamanan Pasien) adalah yang utama dalam pelayanan Rumah Sakit.</p>
-                </div>
-            </div>
-            <div class="col-xl-4 d-flex align-items-stretch">
-                <div class="icon-box mt-4 mt-xl-0">
-                <i class="bx bx-cube-alt"></i>
-                <h4>Peralatan Medis Lengkap</h4>
-                <p>Terdapat beberapa peralatan medis yang kami hadirkan di <?php echo $app_name?>
                 </div>
             </div>
             <div class="col-xl-4 d-flex align-items-stretch">

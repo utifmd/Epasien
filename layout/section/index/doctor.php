@@ -33,9 +33,10 @@
                         <a>No. SIP <?php echo $resource[3]?></a>
                         <span><i class='bx bx-dna'></i> Sepesialis <?php echo $resource[2]?></span>
                         <!-- <span>Sepecialist <?php /* echo $resource[0] */ ?></span> --> <!-- <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p> -->
-                        <div class="social"> <!--<a href=""><i class="ri-twitter-fill"></i></a> <a href=""><i class="ri-facebook-fill"></i></a> <a href=""><i class="ri-instagram-fill"></i></a>-->
+                        <!--<a href=""><i class="ri-twitter-fill"></i></a> <a href=""><i class="ri-facebook-fill"></i></a> <a href=""><i class="ri-instagram-fill"></i></a>-->
+                        <!-- <div class="social"> 
                             <a href=""><i class="ri-linkedin-box-fill"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

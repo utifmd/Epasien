@@ -26,7 +26,7 @@
 </head>
 <body>
 <?php include "../layout/header.php" ?> 
-<?php switch ($_GET['service']) {
+<?php switch (isset($_GET['service'])) {
   case 'first':
       $boxes = $data['service-one']; break;
   default:
@@ -59,7 +59,7 @@
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom:2em">
               <div class="icon-box">
                 <div class="icon"><i class="icofont-heart-beat"></i></div>
-                <h4><a href="?page=<?php echo urlencode($boxes[$i]['title']) ?>&data=<?php echo tokenizeData($boxes[$i]) ?>"><?php echo $boxes[$i]['title']?></a></h4>
+                <h4><a href="?page=<?php echo urlencode($boxes[$i]['title']) ?>&data=<?php echo tokenizeData($boxes[$i]) ?>"><?php echo ucwords($boxes[$i]['title'])?></a></h4>
                 <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
               </div>
             </div>
