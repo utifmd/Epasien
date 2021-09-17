@@ -15,7 +15,9 @@
     </div>
     <?php 
         $navTo = isset($_GET['page']) ? "?page=" : "./pages/?page=";
-        $navBack = isset($_GET['page']) ? "../" : "./"; ?>
+        $navBack = isset($_GET['page']) ? "../" : "./"; 
+        
+        $history = $data['profile-two'];?>
 </div> 
 
 <!-- ======= Header ======= -->
@@ -30,24 +32,23 @@
                 <li class="drop-down"><a href="<?php echo $navBack?>#profile">Profil</a>
                 <ul>
                     <li><a href="<?php echo $navBack?>#doctors">Dokter</a></li>
-                    <li><a href="<?php echo $navTo.urlencode("Sejarah Singkat")."&data=".$token_history?>Sejarah">Sejarah</a></li>
+                    <li><a href="<?php echo $navTo.urlencode($history['title'])."&data=".tokenizeData($history)?>"><?php echo ucwords($history['title'])?></a></li>
                     <li><a href="<?php echo $navTo.urlencode("Visi & Misi")?>">Visi & Misi</a></li>
                 </ul>
                 </li>
                 <li class="drop-down"><a href="<?php echo $navBack?>#services">Layanan</a>
                 <ul>
                     <li class="drop-down"><a>Rawat Inap</a>
-                    <ul> <?php for ($i=0; $i < count($data['service-one']); $i++) { echo "<li>
-                            <a href=".$navTo.urlencode($data['service-one'][$i]['title'])."&data=".tokenizeData($data['service-one'][$i]).">".$data['service-one'][$i]['title']."</a>
-                        </li>"; } ?>
+                    <ul> <?php for ($i=0; $i < count($data['service-one']); $i++) { $selected_one = $data['service-one'][$i]; echo "<li>
+                        <a href=".$navTo.urlencode($selected_one['title'])."&data=".tokenizeData($selected_one).">".ucwords($selected_one['title'])."</a>
+                    </li>"; } ?>
                     </ul>
                     </li>
                     <li><a href="<?php echo $navBack?>#departments">Poliklinik</a></li>
                     <li class="drop-down"><a>Penunjang Medis</a>
-                    <ul><?php for ($i=0; $i < count($data['service-third']); $i++) { $selected_thd = $data['service-third'][$i]; echo "
-                        <li><a href=".$navTo.urlencode($selected_thd['title'])."&data=".tokenizeData($selected_thd).">".$selected_thd['title']."</a></li>
-                    "; }?>
-                        
+                    <ul><?php for ($i=0; $i < count($data['service-third']); $i++) { $selected_thd = $data['service-third'][$i]; echo "<li>
+                        <a href=".$navTo.urlencode($selected_thd['title'])."&data=".tokenizeData($selected_thd).">".ucwords($selected_thd['title'])."</a>
+                    </li>"; }?>
                     </ul>
                     </li>
                 </ul>
