@@ -1,5 +1,6 @@
 <!-- ======= Departments Section ======= -->
 <section id="departments" class="departments">
+    <?php $departments = $data['service-second']; ?>
     <div class="container">
         <div class="section-title">
             <h2>Poliklinik</h2>
@@ -8,40 +9,32 @@
         <div class="row">
             <div class="col-lg-3">
                 <ul class="nav nav-tabs flex-column">
+                <?php $tab = 0; for($i = 0; $i < count($departments); $i++) { $tab++; ?> 
                     <li class="nav-item">
-                        <a class="nav-link active show" data-toggle="tab" href="#tab-1">Poli Anak</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#tab-2">Poli Bedah</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#tab-3">Poli Gizi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#tab-4">Poli Obgyn</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#tab-5">Poli Penyakit Dalam</a>
-                    </li>
+                        <a class="nav-link<?php if($i == 0){ echo " active show"; }?>" data-toggle="tab" href="#tab-<?php echo $tab;?>"><?php echo ucwords($departments[$i]['title'])?></a>
+                    </li> <?php
+                }?>
                 </ul>
             </div>
             <div class="col-lg-9 mt-4 mt-lg-0">
                 <div class="tab-content">
-                    <div class="tab-pane active show" id="tab-1">
+                <?php $tab = 0; for($i = 0; $i < count($departments); $i++) { $tab++; ?>
+                    <div class="tab-pane<?php if($i == 0){ echo " active show"; }?>" id="tab-<?php echo $tab;?>">
                         <div class="row">
                             <div class="col-lg-8 details order-2 order-lg-1">
-                            <h3>Poli Anak</h3>
-                                <!-- <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> -->
-                                <p class="font-italic">Rumah Sakit Ibu dan Anak <?php echo $app_name?> memiliki klinik anak yang memberikan pelayanan konsultasi anak kepada pasien yang memiliki keluhan seputar masalah kesehatan anak. Konsultasi akan dilayani oleh dokter spesialis anak (pediatric) dengan batuan para perawat yang ramah dan terlatih. Konsultasi dokter spesialis anak dilakukan setiap hari sesuai dengan jam praktek dokter masing-masing. Beberapa unggulan pelayanan klinik anak di <?php echo $app_name; ?>.</p>
+                                <a href="./pages/?page=<?php echo urlencode($departments[$i]['title'])?>&data=<?php echo tokenizeData($departments[$i])?>"><h3><?php echo ucwords($departments[$i]['title']);?></h3></a> <!-- <p class="font-italic"></p> -->
+                                <p><?php echo substr($departments[$i]["body"], 0, 225).".. "; ?><a href="./pages/?page=<?php echo urlencode($departments[$i]['title'])?>&data=<?php echo tokenizeData($departments[$i])?>">selengkapnya</a></p> <!-- class="font-italic"-->
                             </div>
                             <div class="col-lg-4 text-center order-1 order-lg-2">
-                                <a href="assets/img/departments-1.jpg" class="venobox" data-gall="gallery-item">
-                                    <img src="assets/img/departments-1.jpg" alt="" class="img-fluid mb-3">
+                                <a href="<?php echo $departments[$i]["image"]?>" class="venobox" data-gall="gallery-item">
+                                    <img src="<?php echo $departments[$i]["image"]?>" alt="<?php echo ucwords($departments[$i]['title'])?>" class="img-fluid mb-3">
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="tab-2">
+                <?php 
+                }/*
+                <div class="tab-pane" id="tab-2">
                         <div class="row">
                             <div class="col-lg-8 details order-2 order-lg-1">
                                 <h3>Poli Bedah</h3>
@@ -97,6 +90,7 @@
                             </div>
                         </div>
                     </div>
+                */?>
                 </div>
             </div>
         </div>

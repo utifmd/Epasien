@@ -9,7 +9,7 @@
         <div class="col-lg-3 col-md-6">
         <div class="count-box">
             <i class="icofont-doctor-alt"></i>
-            <span data-toggle="counter-up">15</span>
+            <span data-toggle="counter-up">16</span>
             <p>Dokter</p>
         </div>
         </div>
@@ -17,7 +17,7 @@
         <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
         <div class="count-box">
             <i class="icofont-patient-bed"></i>
-            <span data-toggle="counter-up">18</span>
+            <span data-toggle="counter-up">6</span>
             <p>Poliklinik</p>
         </div>
         </div>
@@ -32,9 +32,9 @@
 
         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
         <div class="count-box">
-            <i class="icofont-award"></i>
-            <span data-toggle="counter-up">7</span>
-            <p>Penghargaan</p>
+            <i class="icofont-handshake-deal"></i>
+            <span data-toggle="counter-up">6</span>
+            <p>Kerja Sama</p>
         </div>
         </div>
 
