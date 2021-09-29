@@ -95,7 +95,7 @@ function funStatusAccepted($regis_number, $reply){ // echo "funStatusAccepted";
                     <h2>No. Booking ".$regis_number."</h2>
                 </div>
                 <div class=\"alert alert-info\">
-                    Booking Anda diterima, admin Kami sudah melakukan verifikasi data Anda".($reply=="" ? "" : ".<br>$reply")."
+                    Booking Anda diterima, admin Kami sudah melakukan verifikasi data Anda".($reply=="" ? "" : ".<br>Balasan: $reply")."
                 </div>
                 <div class=\"row justify-content-center\">
                     <div class=\"col-md-8\">

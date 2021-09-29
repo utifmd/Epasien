@@ -75,6 +75,8 @@
           include "../layout/section/inner/doctor-detail.php"; break; /*case "Sejarah": include "../layout/section/inner/company-profile.php"; break;*/
         case urldecode("Booking Success"): 
           include "../layout/section/inner/booking-success.php"; break;
+        case urldecode("Login Pasien"): 
+          include "../layout/section/inner/sign-in-patient.php"; break;
         case urldecode("Check Booking Status"): 
           include "../layout/section/inner/check-booking.php"; break;
         case urldecode("Semua Dokter"): 

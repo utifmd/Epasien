@@ -19,7 +19,7 @@
                 <div class="icon-box mt-4 mt-xl-0">
                 <i class="bx bx-cube-alt"></i>
                 <h4>Tenaga Medis Profesional</h4>
-                <p><?php echo $app_name;?> didukung oleh XX Dokter Sub Spesialis, XX Dokter Spesialis, XX Dokter Umum, Perawat dan Paramedis Profesional di bidangnya.</p>
+                <p><?php echo $app_name;?> didukung oleh 6 Dokter Spesialis, 11 Dokter Umum, Perawat dan Paramedis Profesional di bidangnya.</p>
                 </div>
             </div>
             <div class="col-xl-4 d-flex align-items-stretch">

@@ -6,7 +6,7 @@
     /* localserver */
     $db_hostname            = "localhost";
     $db_username            = "root";
-    $db_password            = "";
+    $db_password            = "9809poiiop";
     $db_name                = "rsia"; // "rsia";
     $port                   = 3306;
     
@@ -19,7 +19,7 @@
 
     $root_dir = "http://".$_SERVER['HTTP_HOST']."/public_html/"; //
     $app_name = "RSIA Fadhila";
-    $project_dir = $root_dir."Epasien/";
+    $project_dir = $root_dir."epasien/";
     
     function host(){
         global $db_hostname; 
