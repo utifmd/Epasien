@@ -9,9 +9,9 @@ $data = array(
         )
     ),
     "service-one" => array(
-        array("title" => "kamar inkubator bayi", "image" => $project_dir."assets/img/departments-1.jpg", "body" => "Kondisi para bayi akan terpantau selama 24 jam oleh suster perawatan kamar bayi. Jika ada keluhan atau gangguan lain pada bayi, pihak suster perawatan akan langsung melaporkan pada dokter anak yang ada untuk dilakukan tindakan atau pertolongan medis yang sesuai dengan keluhan masalahnya."),
+        array("title" => "ruang rawatan bayi", "image" => $project_dir."assets/img/departments-1.jpg", "body" => "Kondisi para bayi akan terpantau selama 24 jam oleh suster perawatan kamar bayi. Jika ada keluhan atau gangguan lain pada bayi, pihak suster perawatan akan langsung melaporkan pada dokter anak yang ada untuk dilakukan tindakan atau pertolongan medis yang sesuai dengan keluhan masalahnya."),
+        array("title" => "kamar rawatan ibu", "image" => $project_dir."assets/img/departments-3.jpg", "body" => "Untuk menunjang pelayanannya, ".$app_name." menyediakan kamar perawatan untuk ibu yang mebutuhkan rawat inap."),
         array("title" => "kamar bersalin", "image" => $project_dir."assets/img/departments-2.jpg", "body" => "Untuk menunjang pelayanannya, ".$app_name." menyediakan kamar perawatan untuk ibu yang mebutuhkan rawat bersalin."),
-        array("title" => "kamar ibu", "image" => $project_dir."assets/img/departments-3.jpg", "body" => "Untuk menunjang pelayanannya, ".$app_name." menyediakan kamar perawatan untuk ibu yang mebutuhkan rawat inap."),
         array("title" => "kamar operasi", "image" => $project_dir."assets/img/departments-3.jpg", "body" => "Kamar Operasi adalah khusus memberikan pelayanan berkualitas kepada pasien saat sebelum, selama, dan sesaat sesudah dilakukan tindakan pembedahan. Kamar Operasi di ".$app_name." disediakan untuk proses persalinan caesar (cesar) dan tindakan bedah lainnya. Dalam proses operasi pasien akan dibantu oleh para dokter bedah yang berpengalaman dan para perawat yang terlatih."),
     ),
     "service-second" => array(

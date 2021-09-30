@@ -20,3 +20,7 @@
 
 <!-- Template Main CSS File -->
 <link href="<?php echo $path?>assets/css/style.css" rel="stylesheet">
+
+<!-- <link href="<?php// echo $path?>css/font-awesome.min.css" rel="stylesheet" />
+<link href="<?php// echo $path?>css/owl.theme.default.min.css" rel="stylesheet" />
+<link href="<?php// echo $path?>css/tooplate-style.css" rel="stylesheet" /> -->

@@ -10,9 +10,8 @@
     
     $thncari   = trim(isset($_POST['tgl_registrasi']))?substr($_POST['tgl_registrasi'],6,4):$thnbesok;
     $blncari   = trim(isset($_POST['tgl_registrasi']))?substr($_POST['tgl_registrasi'],3,2):$blnbesok;
-    $tglcari   = trim(isset($_POST['tgl_registrasi']))?substr($_POST['tgl_registrasi'],0,2):$tglbesok;
-?>
-<link href="plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    $tglcari   = trim(isset($_POST['tgl_registrasi']))?substr($_POST['tgl_registrasi'],0,2):$tglbesok; ?>
+<link href="./plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
 <div class="block-header">
     <h2><center>BOOKING REGISTRASI</center></h2>
 </div>

@@ -12,12 +12,10 @@
 <script src="<?php echo $navBack?>assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 <script src="<?php echo $navBack?>assets/js/main.js"></script>
 
-<!--
-<script src="js/jquery.sticky.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/custom.js"></script>
-<script src="conf/validator.js" type="text/javascript"></script>
--->
+<!-- <script src="<?php // echo $navBack?>js/jquery.sticky.js"></script> -->
+<!-- <script src="<?php // echo $navBack?>js/jquery.stellar.min.js"></script> -->
+<!-- <script src="<?php // echo $navBack?>js/wow.min.js"></script> -->
+<!-- <script src="<?php // echo $navBack?>js/smoothscroll.js"></script> -->
+<!-- <script src="<?php // echo $navBack?>js/owl.carousel.min.js"></script> -->
+<!-- <script src="<?php // echo $navBack?>js/custom.js"></script> -->
+<!-- <script src="<?php // echo $navBack?>conf/validator.js" type="text/javascript"></script> -->

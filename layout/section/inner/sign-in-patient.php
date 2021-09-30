@@ -1,3 +1,4 @@
+<?php if(!empty($_POST['regis_num']) && !empty($_POST['regis_pwd'])) funCheckListener(); ?>
 <section id="appointment" class="appointment">
     <div class="container">
         <div class="section-title">
@@ -8,7 +9,7 @@
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-8 form-col">
                     <div class="form-group">
-                        <input type="text" required name="regis_num" class="form-control" id="regis_num" placeholder="No. Booking" data-rule="minlen:4" data-msg="Tolong isi paling tidak 4 karakter">
+                        <input type="text" required name="regis_num" class="form-control" id="regis_num" placeholder="No. Rekam Medis" data-rule="minlen:4" data-msg="Tolong isi paling tidak 4 karakter">
                     </div>
                     <div class="form-group">
                         <input type="password" required name="regis_pwd" class="form-control" id="regis_pwd" placeholder="Password" data-rule="password" data-msg="Tolong isi pasword registrasi yang valid">
@@ -30,11 +31,12 @@ function layoutAlert($title, $message){ return "
 }
 
 function funCheckListener(){
-    $regis_num = $_POST["regis_num"];
-    $regis_pwd = $_POST["regis_pwd"];
+    $regis_num = cleankar($_POST["regis_num"]);
+    $regis_pwd = cleankar2($_POST["regis_pwd"]);
 
-    if(true){ //getOne2("SELECT COUNT(*) FROM personal_pasien WHERE no_rkm_medis='$regis_num' AND password=aes_encrypt('$regis_pwd','windi')") > 0){
-
+    if(getOne2("SELECT COUNT(*) FROM personal_pasien WHERE no_rkm_medis='$regis_num' AND password = aes_encrypt('$regis_pwd','windi')") > 0){
+        $_SESSION["ses_pasien"] = encrypt_decrypt($regis_num, "e");
+        exit(header("Location: ../index.php")); // echo "<script>alert('$regis_num $regis_pwd')</script>";
     }else echo layoutAlert("Mohon maaf", "Kesalahan pada query");
 }
 
@@ -42,6 +44,6 @@ function funLoginRejected($reply){
     echo layoutAlert("Mohon maaf", "Maaf, gagal login. Nomor rekam medis atau password ada yang salah");
 }
 
-function funLoginAccepted($regis_number, $reply){
+function funLoginAccepted($regis_num, $reply){
     echo layoutAlert("Mohon maaf", "sedang terjadi kesalahan pada server.");
 } ?>

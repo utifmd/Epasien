@@ -14,7 +14,8 @@
                     <div class="form-group">
                         <input type="tel" required name="phone_num" class="form-control" id="phone_num" placeholder="No. Telp" data-rule="phone" data-msg="Tolong isi No. Telp yang valid">
                     </div>
-                    <input class="appointment-btn btn m-auto mt-3" type="submit" value="Check Status" />
+                    <input class="appointment-btn btn m-auto mt-3 mb-3" type="submit" value="Check Status" /> <br /><br />
+                    <a href="./?page=<?php echo urlencode("Login Pasien")?>" target='_blank'>Login Pasien</a>
                 </div>
             </div>
         </form>
@@ -102,14 +103,13 @@ function funStatusAccepted($regis_number, $reply){ // echo "funStatusAccepted";
                         <table class=\"table table-striped m-3\">
                             <tr><th>Tgl. Booking</th><td>: ".$resource_accepted["tanggal_booking"]." ".$resource_accepted["jam_booking"]."</td></tr>
                             <tr><th>Tgl. Periksa</th><td>: ".$resource_accepted["tanggal_periksa"]."</td></tr>
-                            <tr><th>No.Rekam Medis</th><td>: ".$resource_accepted["no_rkm_medis"]."</td></tr>
                             <tr><th>Nama Pasien</th><td>: ".$resource_accepted["nama"]."</td></tr>
                             <tr><th>No. Hp/Telp</th><td>: ".$resource_accepted["no_telp"]."</td></tr>
                             <tr><th>E-Mail</th><td>: ".$resource_accepted["email"]."</td></tr>
                             <tr><th>Alamat</th><td>: ".$resource_accepted["alamat"]."</td></tr>
                             <tr><th>Unit/Poliklinik</th><td>: ".$resource_accepted["nm_poli"]."</td></tr>
                             <tr><th>Dokter</th><td>: ".$resource_accepted["nm_dokter"]."</td></tr>
-                            <tr><th>No.Antri Poli</th><td>: ".$resource_accepted["no_reg"]."</td></tr>
+                            <tr><th>No.Rekam Medis</th><td>: ".$resource_accepted["no_rkm_medis"]."</td></tr>
                             <tr><th>Password Login</th><td>: ".$resource_accepted["pass"]."</td></tr>
                         </table> 
                     </div>
@@ -118,7 +118,7 @@ function funStatusAccepted($regis_number, $reply){ // echo "funStatusAccepted";
                     <a class=\"btn appointment-btn m-auto\" href=\"../components/CetakBooking.php?iyem=".encrypt_decrypt("{\"nobooking\":\"$regis_number\"}","e")."\" target=\"_blank\">Cetak</a>
                 </div>
             </div>
-        </section>";
+        </section>"; // <tr><th>No.Antri Poli</th><td>: ".$resource_accepted["no_reg"]."</td></tr>
         
     }else echo layoutAlert("Mohon maaf", "sedang terjadi kesalahan pada server.");
 } ?>

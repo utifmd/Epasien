@@ -1,6 +1,6 @@
 <?php
     if(strpos($_SERVER['REQUEST_URI'],"pages")){
-        exit(header("Location:../index.php"));
+        exit(header("Location: ../index.php"));
     }
 
     $querypengumuman = bukaquery("select pegawai.nama,date_format(pengumuman_epasien.tanggal,'%d/%m/%Y')as tanggal,pengumuman_epasien.pengumuman from pengumuman_epasien inner join pegawai on pengumuman_epasien.nik=pegawai.nik order by pengumuman_epasien.tanggal desc limit 1");
@@ -207,7 +207,7 @@
                                        <td colspan='2'>
                                             <table width='100%'>
                                                 <tr>
-                                                    <td width='40%' align='right'><img src='pages/".$PNG_WEB_DIR.basename($filename)."'/></td>
+                                                    <td width='40%' align='right'><img src='./".$PNG_WEB_DIR.basename($filename)."'/></td>
                                                     <td width='60%' align='left'>
                                                         <div class='font-50'>".$rsqueryregistrasi["no_reg"]."</div>
                                                         <br>
@@ -255,6 +255,6 @@
     setInterval("my_function();",6000); 
     
     function my_function(){
-        $("#screen").load("pages/daftarantrian.php");
+        $("#screen").load("./components/listkamaruser.phpdaftarantrian.php");
     }
 </script>

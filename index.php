@@ -26,9 +26,7 @@
     }
   }
 
-  if(false)//!isset($_SESSION["ses_pasien"]))
+  if(isset($_SESSION["ses_pasien"]))
     include_once "./layout/main-patient.php";
   else 
-    include_once "./layout/main-guest.php";
-
-?>
+    include_once "./layout/main-guest.php"; ?>
