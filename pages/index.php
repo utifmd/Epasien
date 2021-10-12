@@ -69,9 +69,9 @@
       </section>
     <?php } else { ?>
       <?php switch ($_GET['page']) {
-        case urldecode("Jadwal Dokter"): 
+        case urldecode("Jadwal Dokter"):
           include "../layout/section/inner/doctor-schedule.php"; break;
-        case urldecode("Dokter Detail"): 
+        case urldecode("Dokter Detail"):
           include "../layout/section/inner/doctor-detail.php"; break; /*case "Sejarah": include "../layout/section/inner/company-profile.php"; break;*/
         case urldecode("Booking Success"): 
           include "../layout/section/inner/booking-success.php"; break;

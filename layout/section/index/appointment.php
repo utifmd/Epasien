@@ -8,8 +8,7 @@
 <section id="appointment" class="appointment section-bg">
     <div class="container">
         <div class="section-title">
-            <h2>Registrasi (Booking) Online</h2> <!--Buat Janji-->
-            <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+            <h2>Registrasi (Booking) Online</h2> <!--Buat Janji--> <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
     <form action="./forms/appointment.php" method="post" role="form" class="php-email-form">
         <div class="row">
@@ -65,8 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="mb-3">
-            <!-- <div class="loading">Loading</div> -->
+        <div class="mb-3"> <!-- <div class="loading">Loading</div> -->
             <div class="error-message"></div>
             <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
         </div>

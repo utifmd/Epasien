@@ -58,7 +58,7 @@
                                 </tr>
                                 <tr>
                                    <td width='30%' align='right'><img src=".$_SESSION["photo"]." width='150' height='150' alt='Photo' /></td>
-                                   <td width='70%'><img src='pages/".$PNG_WEB_DIR.basename($filename)."' width='150' height='150' alt='QR Code' /></td>
+                                   <td width='70%'><img src='./components/".$PNG_WEB_DIR.basename($filename)."' width='150' height='150' alt='QR Code' /></td>
                                 </tr>
                            </table>
                         </div>

@@ -37,21 +37,21 @@
          or die ("<font color=red><h3>Not Connected ..!!</h3></font>");
          $db_select=mysqli_select_db($konektor, $db_name)
          or die("<font color=red><h3>Cannot chose database..!!</h3></font>". mysqli_error());
-	return $konektor;
+	    return $konektor;
     }
      
     function cleankar($dirty){
          $konektor=bukakoneksi();
 	 $clean = mysqli_real_escape_string($konektor,$dirty);	
 	 mysqli_close($konektor);
-	return preg_replace('/[^a-zA-Z0-9\s_,@. ]/', '',$clean);
+	    return preg_replace('/[^a-zA-Z0-9\s_,@. ]/', '',$clean);
     }
     
     function cleankar2($dirty){
          $konektor=bukakoneksi();
 	 $clean = mysqli_real_escape_string($konektor,$dirty);	
          mysqli_close($konektor);
-	return $clean;
+	    return $clean;
     }
     
     function antisqlinjection(){

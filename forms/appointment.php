@@ -32,7 +32,7 @@
           </div>";
         }
       } else { 
-        echo "<h3>Maaf, Anda hanya bisa booking minimal 1 hari kedepan."; // echo $_POST['name']."-".$_POST['address']; // if(isset($_POST['register'])){ //   echo "register triggered."; // }else //   echo "There is no post."
+        echo "<h3>Maaf, Anda hanya diperbolehkan booking registrasi 1 hari dari sekarang."; // bisa booking minimal 1 hari kedepan echo $_POST['name']."-".$_POST['address']; // if(isset($_POST['register'])){ //   echo "register triggered."; // }else //   echo "There is no post."
       }
   } else { 
     echo "<h3>Maaf, Semua field wajib diisi.";

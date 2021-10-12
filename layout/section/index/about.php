@@ -7,7 +7,7 @@
             </div>
             <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" align="justify">
                 <h3>Tentang Kami</h3>
-                <p>Rumah Sakit Ibu dan Anak <?php echo $app_name;?> Batusangkar yang beralamat di jalan Baringin No.5 Jorong Baringin Kecamatan Lima Kaum Kabupaten Tanah Datar Provinsi Sumatera Barat, bermula dari praktek pribadi dr. Syahrul Harun, Sp.OG dengan nama Klinik Fadhila, dengan fasilitas kamar bersalin, ruang praktek dan 2 kamar rawat inap.</p>
+                <p>Rumah Sakit Ibu dan Anak <?php echo $app_name;?> Batusangkar yang beralamat di jalan Baringin No.5 Jorong Baringin Kecamatan Lima Kaum Kabupaten Tanah Datar Provinsi Sumatera Barat, bermula dari praktek pribadi Dr. Syahrul Harun, Sp.OG dengan nama Klinik Bersalin Fadhila, dengan fasilitas kamar bersalin, ruang praktek dan 2 kamar rawat inap.</p>
                 <div class="icon-box">
                     <div class="icon"><i class="bx bx-fingerprint"></i></div>
                     <h4 class="title"><a>Tahun 2002</a></h4>
